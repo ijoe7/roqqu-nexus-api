@@ -1,0 +1,41 @@
+{
+  "name": "tpl-ts",
+  "version": "1.0.0",
+  "description": "Tpl Implementation",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "dev": "nodemon --watch src --exec tsx src/index.ts",
+    "test": "jest --runInBand --verbose",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/joi": "^17.2.2",
+    "@types/knex": "^0.15.2",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.19.1",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.1.7"
+  }
+}
