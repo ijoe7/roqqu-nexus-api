@@ -6,8 +6,9 @@
   "scripts": {
     "start": "node ./dist/index.js",
     "dev": "nodemon --watch src --exec tsx src/index.ts",
-    "test": "jest --runInBand --verbose",
-    "build": "tsc"
+    "test": "NODE_ENV=test jest --runInBand --verbose",
+    "build": "tsc",
+    "migrate": "tsx ./node_modules/knex/bin/cli.js migrate:latest --knexfile src/knexfile.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +16,12 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
     "@types/joi": "^17.2.2",
     "@types/knex": "^0.15.2",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.9.1",
+    "@types/supertest": "^6.0.2",
     "@typescript-eslint/eslint-plugin": "^8.19.1",
     "@typescript-eslint/parser": "^8.19.1",
     "eslint": "^9.18.0",
@@ -26,6 +29,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "nodemon": "^3.1.7",
     "prettier": "^3.4.2",
+    "supertest": "^7.0.0",
     "tsx": "^4.19.2",
     "typescript": "^5.6.3"
   },

@@ -7,3 +7,10 @@ export const createAddressSchema = Joi.object({
   state: Joi.string().required(),
   zip: Joi.string().required()
 });
+
+export const updateAddressSchema = Joi.object({
+  street: Joi.string().optional(),
+  city: Joi.string().optional(),
+  state: Joi.string().optional(),
+  zip: Joi.string().optional()
+});

@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-// import allRoutes from './routes/allRoutes'
+import allRoutes from './routes/allRoutes'
 import { errorHandler } from './config/errorHandler';
 import { NotFoundError } from './config/appError';
 
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Register the routes
 // Routes
-// app.use(allRoutes);
+app.use(allRoutes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello, Welcome.');

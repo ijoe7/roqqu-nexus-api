@@ -37,6 +37,7 @@ export const getUserByIdController = async (req: Request, res: Response, next: N
 
 export const countUsersController = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    console.log('I am here');
     const count = await userService.countUsers();
     return responseHandler(res, 200, 'User count retrieved successfully', { count });
   } catch (error) {

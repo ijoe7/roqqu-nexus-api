@@ -29,7 +29,7 @@ export const updateAddressController = async (req: Request, res: Response, next:
     const userId = parseInt(req.params.userId);
     const updatedCount = await addressService.updateAddress(userId, req.body);
     if (updatedCount === 0) throw new AppError('Address not found', 404);
-    return responseHandler(res, 200, 'Address retrieved successfully', updatedCount);
+    return responseHandler(res, 200, 'Address updated successfully', updatedCount);
   } catch (error) {
     next(error);
   }

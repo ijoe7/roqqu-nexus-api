@@ -8,7 +8,7 @@ const router = Router();
 
 router.post('/', validateRequest(createUserSchema), createUserController);
 router.get('/', getUsersController);
-router.get('/:id', getUserByIdController);
 router.get('/count', countUsersController);
+router.get('/:id', getUserByIdController);
 
 export default router;

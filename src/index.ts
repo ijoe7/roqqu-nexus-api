@@ -1,5 +1,5 @@
 import { config } from './config/config';
-import './config/mongoose';
+
 import app from './app';
 
 // Handle uncaught exceptions
