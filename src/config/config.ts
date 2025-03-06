@@ -14,6 +14,5 @@ function getEnvVariable(key: string): string {
 
 export const config = {
   port: Number(process.env.PORT) || 3001,
-  environment: process.env.NODE_ENV || 'development',
-  dbUrl: getEnvVariable('DB_URL') as string
+  environment: process.env.NODE_ENV || 'development'
 };
